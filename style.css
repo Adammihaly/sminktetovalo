@@ -79,6 +79,10 @@ header {
             font-size: 1.125vw;
             font-weight: 600;
 
+            & .fa-solid {
+                font-size: 1.2vw;
+                color: var(--szurke);
+            }
 
             & a {
                 color: var(--szurke);
@@ -105,6 +109,40 @@ header {
                 top: 120%;
                 left: 50%;
             }
+
+            /* dropdown */
+            & li:nth-child(2), li:nth-child(3) {
+                position: relative;
+            }
+
+            & li:nth-child(2):hover div, li:nth-child(3):hover div {
+                display: flex;
+            }
+
+            & li:nth-child(2) div, li:nth-child(3) div {
+                display: none;
+                position: absolute;
+                width: 12.5vw;
+                height: 6vh;
+                background-color: #fff; 
+                border: 2px solid var(--szin);
+                border-radius: 0.25vw;
+
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                & .csik {
+                    width: 80%;
+                    height: 1px;
+                    border-radius: 2px;
+                    background: var(--szurke);
+                }
+
+                & a {
+                    font-size: 0.8vw;
+                }
+            }
         }
     }
 
@@ -124,8 +162,10 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    
-    & .kezdolap {
+    position: relative;
+    overflow: hidden;
+
+    .kezdolap {
         display: flex;
         align-items: stretch;
         width: 80%;
@@ -135,7 +175,7 @@ main {
 
         & div {
             width: 80%;
-            margin-right: 20%;
+            margin-right: 10%;
             
             display: flex;
             flex-direction: column;
@@ -168,6 +208,10 @@ main {
                     width: 50%;
                     font-weight: 500;
                 }
+
+                & button:nth-child(1) {
+                    box-shadow: 0px 15px 25px -20px rgba(0,0,0,1);
+                }
             }
         }
 
@@ -192,6 +236,312 @@ main {
             left: -4.5vw;
         }
     }
+    
+    .szalonrolWrapper {
+        position: relative;
+    }
+
+    .szalonrol {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 12.5vh;
+
+        & h2 {
+            width: 100%;
+            font-size: 3.5vw;
+            color: var(--szin);
+            font-weight: 600;
+            text-align: center;
+            margin-top: 12.5vh;
+            margin-bottom: 12.5vh;
+        }
+
+        & .wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .szalonKepek {  
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 2vw;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  "fent fent fent"
+                  "fent fent fent"
+                  "lent1 lent2 lent3";
+                width: 50%;
+
+                .lent1, .lent2, .lent3 {
+                    aspect-ratio: 1/1;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 0.75vw;
+                }
+            }
+              
+            .fent { grid-area: fent; }
+              
+            .lent1 { grid-area: lent1; }
+              
+            .lent2 { grid-area: lent2; }
+              
+            .lent3 { grid-area: lent3; } 
+
+            & .szoveg { 
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                & h1 {
+                    font-size: 2.5vw;
+                    color: var(--szurke);
+                    font-weight: 600;
+                    margin-bottom: 2.5vh;
+                    margin-top: 0;
+                    text-align: left;
+                }
+
+                .csik {
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: var(--szin);
+                    margin-bottom: 2.5vh;
+                }
+
+                & span {
+                    font-size: 1.125vw;
+                    color: var(--szurke);
+                    margin-bottom: 2.5vh;
+                }
+
+                & button {
+                    font-weight: 500;
+                }
+            }
+
+        }
+        
+        &::before {
+            margin-left: auto;
+            content: '';
+            position: absolute;
+            width: 9vw;
+            height: 9vw;
+            border-radius: 100%;
+            background: var(--szin);
+            bottom: -4.5vw;
+            right: -4.5vw;
+        }
+    }
+    
+    .galeria   {
+        position: relative;
+        
+        .galeriaKepek {  
+                display: grid;
+                grid-template-columns: 0.5fr 0.5fr 0.5fr;
+                grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+                grid-auto-flow: row;
+                gap: 1vw;
+                grid-template-areas:
+                    "osz11 osz21 osz31"
+                    "osz12 osz21 osz32"
+                    "osz12 osz22 osz33"
+                    "osz12 osz3 osz33";
+                width: 65%;
+                margin: 0 auto;
+                margin-bottom: 15vh;
+            }
+
+            .osz11 { grid-area: osz11; }
+            
+            .osz12 { grid-area: osz12; }
+            
+            .osz21 { grid-area: osz21; }
+            
+            .osz22 { grid-area: osz22; }
+            
+            .osz3 { grid-area: osz3; }
+            
+            .osz31 { grid-area: osz31; }
+            
+            .osz32 { grid-area: osz32; }
+            
+            .osz33 { grid-area: osz33; }
+        
+            & h2 {
+                width: 100%;
+                font-size: 3.5vw;
+                color: var(--szin);
+                font-weight: 600;
+                text-align: center;
+                margin-top: 12.5vh;
+                margin-bottom: 12.5vh;
+            }
+
+            & img {
+                width: 100%; 
+                height: 100%;
+                object-fit: cover;
+                border-radius: 0.75vw;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 9vw;
+                height: 9vw;
+                border-radius: 100%;
+                background: var(--szin);
+                bottom: -4.5vw;
+                left: -4.5vw;
+                transform: translateY(15vh);
+            }
+    }
+
+    .kapcsolat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+        & h3 {
+            font-size: 3.5vw;
+            color: var(--szin);
+            font-weight: 600;
+            text-align: center;
+            margin-top: 12.5vh;
+            margin-bottom: 2.5vh;
+        }
+
+        & span {
+            font-size: 1.125vw;
+            color: var(--szurke);
+            margin-bottom: 10vh;
+            text-align: center;
+        }
+
+        & .wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: 10vh;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            width: 40%;
+
+            & label {
+                font-size: 1.125vw;
+                color: black;
+            }
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                gap: .5vh;
+            }
+
+            & input, textarea {
+                padding: 1vw 2vw;
+                border-radius: 0.5vw;
+                border: 0;
+                font-size: 1.125vw;
+                font-family: var(--font);
+
+                color: var(--szurke);
+                background-color: rgba(167, 105, 126, 0.15);
+            }
+
+            & button {
+                width: 33%;
+                align-self: center;
+            }
+        }
+
+        & iframe {
+            width: 50%;
+            border: 3px solid var(--szin);
+            border-radius: 0.75vw;
+            box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+    }
+    
+    .footer {
+        width: 100%;
+        background-color: var(--szin);
+        color: white;
+
+        & .wrapper {
+            margin: 1vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & img {
+                width: 20vw;
+            }
+
+            & .elerhetosegek, .ajanlott, .social {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                align-self: flex-start;
+                padding-top: 2vh;
+
+                & a {
+                    color: white;
+                }
+
+                & .csik {
+                    width: 100%;
+                    height: 1px;
+                    border-radius: 2px;
+                    background: white;
+                }
+
+                & h4 {
+                    font-size: 1vw;
+                    font-weight: 500;
+                    margin-bottom: 1vh;
+                }
+
+                & i {
+                    font-size: 2vw;
+                }
+
+                & .logok {
+                    display: flex;
+                    gap: 1vw;
+                }
+            }
+        }
+
+        & .szoveg {
+            text-align: center;
+            padding: 0.25vw;
+            font-size: 1vw;
+
+            & a {
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 .backgroundWrapper {
@@ -204,8 +554,9 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(background.jpg) no-repeat center center;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(background.jpg) no-repeat center center;
     mix-blend-mode: luminosity;
+
     top: 0;
     left: 0;
 }
