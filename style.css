@@ -548,6 +548,8 @@ main {
             text-align: center;
             padding: 0.25vw;
             font-size: 1vw;
+            margin-top: 2.5vh;
+            margin-bottom: 2vh;
 
             & a {
                 color: white;
@@ -743,6 +745,7 @@ main {
                 display: flex;
                 gap: 2.5vw;
                 overflow-x: auto;
+                scrollbar-width: none;
                 white-space: nowrap;
                 width: 100%;
                 margin-bottom: 7.5vh;
