@@ -52,6 +52,10 @@ body {
     }
 }
 
+.mobilNav {
+    display: none;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -71,7 +75,7 @@ header {
         display: none;
     }
 
-    & nav {
+    & .desktopNav {
         display: flex;
         justify-content: center;
         
@@ -243,6 +247,10 @@ main {
     
     .szalonrolWrapper {
         position: relative;
+
+        & .mobilKepek {
+            display: none;
+        }
     }
 
     .szalonrol {
@@ -297,7 +305,7 @@ main {
               
             .lent2 { grid-area: lent2; }
               
-            .lent3 { grid-area: lent3; } 
+            .lent3 { grid-area: lent3; }
 
             & .szoveg { 
                 width: 40%;
@@ -349,8 +357,10 @@ main {
     }
     
     .galeria   {
-        position: relative;
-        
+        & .mobilGaleriaKepek {
+            display: none;
+        }
+
         .galeriaKepek {  
                 display: grid;
                 grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -409,7 +419,6 @@ main {
                 background: var(--szin);
                 bottom: -4.5vw;
                 left: -4.5vw;
-                transform: translateY(15vh);
             }
     }
 
@@ -572,6 +581,86 @@ main {
         padding: 2.25vw 4vw;
     }
 
+    .mobilNav {
+        display: flex;
+        
+        & .sidebarBack {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: left;
+            
+            & i {
+                padding-left: 5%;
+                font-size: 10vw;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        & .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            padding: 5vw;
+            transform: translateX(200%);
+            transition: transform 0.5s ease;
+            border-top-left-radius: 5vw;
+
+            & nav {
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+                height: 90%;
+
+                & ul {
+                    height: inherit;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5vh;
+                    color: black;
+                    font-weight: 600;
+                    justify-content: space-evenly;
+                    font-size: 4vw;
+
+                    & .csik {
+                        margin-top: 0.5vh;
+                        width: 80%;
+                        height: 1px;
+                        border-radius: 2px;
+                        background: var(--szurke);
+                    }
+
+                    .tudnivalokDiv, .tetovalasokDiv {
+                        display: none;
+                        flex-direction: column;
+                        gap: 2vh;
+                        margin-top: 2vh;
+                        padding: 2vh 2vw;
+                        border: 2px solid var(--szin);
+                        border-radius: 2vw;
+                    }
+                    
+                }
+            
+            }
+        }
+    }
+
     header {
         justify-content: space-between;
 
@@ -580,14 +669,15 @@ main {
             margin-right: 10vw;
             color: var(--szin);
             font-size: 5vw;
+            z-index: 1;
         }
 
         & img {
-            width: 30vw;
-            margin-left: 5vw;
+            width: 35vw;
+            margin-left: 8vw;
         }
 
-        & nav {
+        & .desktopNav {
             display: none;
         }
 
@@ -618,7 +708,7 @@ main {
                 & p {
                     margin-top: 2vh;
                     margin-bottom: 2vh;
-                    font-size: 2.5vw;
+                    font-size: 3vw;
                     align-self: center;
                 }
 
@@ -627,7 +717,7 @@ main {
                     gap: 2vh;
 
                     & button {
-                        width: 75%;
+                        width: 80%;
                         align-self: center
                     }
                 }
@@ -641,7 +731,218 @@ main {
             }
 
             &::before {
+                height: 20vw;
+                width: 20vw;
+                bottom: -10vw;
+                left: -10vw;
+            }
+        }
+
+        .szalonrolWrapper {
+            & .mobilKepek {
+                display: flex;
+                gap: 2.5vw;
+                overflow-x: auto;
+                white-space: nowrap;
+                width: 100%;
+                margin-bottom: 7.5vh;
+                padding-bottom: 1.75vh;
+
+                & img {
+                    height: 50vw;
+                    border-radius: 3vw;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .szalonrol {
+            margin-bottom: 5vh;
+
+            & h2 {
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+                font-size: 7vw;
+                width: 50%;
+                align-self: center;
+            }
+
+            & .wrapper {
+                flex-direction: column;
+                width: 100%;
+
+                .szalonKepek {
+                    display: none;
+                }
+
+                & .szoveg {
+                    width: 80%;
+                    align-self: center;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    & h1 {
+                        font-size: 5.5vw;
+                        text-align: center;
+
+                        align-self: center;
+                    }
+
+                    & .span2 {
+                        display: none;
+                    }
+
+                    .csik {
+                        margin-bottom: 2vh;
+                    }
+
+                    & span {
+                        font-size: 3.5vw;
+                    }
+
+                    & button {
+                        font-size: 4vw;
+                        align-self: center;
+                        width: 70%;
+                    }
+                }     
+            }
+
+            &::before {
+                width: 20vw;
+                height: 20vw;
+                bottom: -10vw;
+                right: -10vw;
+            }
+        }
+
+        .backgroundWrapper {
+            position: relative;
+        }
+
+        .galeria {
+            & .galeriaKepek {
                 display: none;
+            }
+
+            & .mobilGaleriaKepek {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5vw;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 5vh;
+
+                & img {
+                    height: 50vw;
+                    border-radius: 3vw;
+                    object-fit: cover;
+                }
+            }
+
+            & h2 {
+                font-size: 7vw;
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+            }
+            
+
+            &::before {
+                width: 20vw;
+                height: 20vw;
+                bottom: -10vw;
+                left: -10vw;
+            }
+        }
+
+        .kapcsolat {
+            & h3 {
+                font-size: 7vw;
+                margin-top: 5vh;
+                margin-bottom: 2.5vh;
+            }
+
+            & span {
+                font-size: 3.5vw;
+                margin-bottom: 5vh;
+            }
+
+            & .wrapper {
+                flex-direction: column;
+                gap: 5vh;
+                width: 100%;
+                margin-bottom: 5vh;
+            }
+
+            & form {
+                width: 100%;
+                align-self: center;
+
+                & label {
+                    font-size: 3.5vw;
+                }
+
+                & input, textarea {
+                    padding: 3vw 6vw;
+                    font-size: 3.5vw;
+                    border-radius: 1.5vw;
+                }
+
+                & button {
+                    width: 50%;
+                    align-self: center;
+                }
+            }
+
+            & iframe {
+                width: 95%;
+                height: 65vh;
+                margin: 0 auto;
+                margin-bottom: 2.5vh;
+            }
+        }
+
+        .footer {
+            & .wrapper {
+                flex-direction: column;
+                gap: 2.5vh;
+                align-items: center;
+                margin-bottom: 2.5vh;
+
+                & .logo {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 2.5vh;
+
+                    & img {
+                        width: 85%;
+                    }
+                }
+
+                & .elerhetosegek, .ajanlott, .social {
+                    align-self: center;
+                    padding-top: 5vh;
+                    text-align: center;
+
+                    & h4 {
+                        font-size: 3.5vw;
+                        margin-bottom: 2.5vh;
+                    }
+
+                    & i {
+                        font-size: 7vw;
+                    }
+
+                    & .logok {
+                        gap: 5vw;
+                        align-self: center;
+                    }
+                }
+            }
+
+            & .szoveg {
+                font-size: 3vw;
             }
         }
     }
