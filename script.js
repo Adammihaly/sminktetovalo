@@ -20,7 +20,7 @@ const tudnivalok = document.querySelector('.tudnivalok');
 
 tudnivalok.addEventListener('click', () => {
   const div = document.querySelector('.tudnivalokDiv');
-  if(div.style.display === 'none'){
+  if(div.style.display != 'flex'){
     div.style.display = 'flex';
   } else {
     div.style.display = 'none';
@@ -31,7 +31,7 @@ const tetovalasok = document.querySelector('.tetovalasok');
 
 tetovalasok.addEventListener('click', () => {
   const div = document.querySelector('.tetovalasokDiv');
-  if(div.style.display === 'none'){
+  if(div.style.display != 'flex'){
     div.style.display = 'flex';
   } else {
     div.style.display = 'none';
