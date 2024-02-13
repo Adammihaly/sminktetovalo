@@ -744,12 +744,29 @@ main {
             & .mobilKepek {
                 display: flex;
                 gap: 2.5vw;
-                overflow-x: auto;
-                scrollbar-width: none;
                 white-space: nowrap;
                 width: 100%;
                 margin-bottom: 7.5vh;
                 padding-bottom: 1.75vh;
+                position: relative;
+                overflow-x: scroll;
+                padding-bottom: 2vh;
+                scrollbar-color: var(--szin) var(--szurke);
+
+                &::before,
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 5vw;
+                }
+
+                &::before {
+                    flex-shrink: 0;
+                }
+
+                &::after {
+                    flex-shrink: 0;
+                }
 
                 & img {
                     height: 50vw;
@@ -758,6 +775,7 @@ main {
                 }
             }
         }
+        
 
         .szalonrol {
             margin-bottom: 5vh;
