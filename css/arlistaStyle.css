@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font: "Montserrat", sans-serif;
+    --szin: #A7697E;
+    --szurke: #626262;
+}
+
+body {
+    background: white; 
+    font-family: var(--font);
+
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.solidGomb,
+.atlatszoGomb {
+    color: var(--szin);
+    padding: 1vw 2vw;
+    border-radius: 0.5vw;
+    font-size: 1.125vw;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.solidGomb {
+    background: var(--szin);
+    border: 3px solid var(--szin);
+    color: white;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: transparent;
+        color: var(--szin);
+    }
+}
+
+.atlatszoGomb {
+    background: transparent;
+    border: 3px solid var(--szin);
+
+    &:hover {
+        background-color: var(--szin);
+        color: white;
+    }
+}
+
+.mobilNav {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    & img {
+        width: 18vw;
+        margin-left: 2vw;
+        margin-top: 2.5vh;
+
+        align-self: flex-start;
+    }
+
+    & .mobil {
+        display: none;
+    }
+
+    & .desktopNav {
+        display: flex;
+        justify-content: center;
+        
+        transform: translateX(15%);
+        & ul {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+            font-size: 1.125vw;
+            font-weight: 600;
+
+            & .fa-solid {
+                font-size: 1.2vw;
+                color: var(--szurke);
+            }
+
+            & a {
+                color: var(--szurke);
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--szin);
+                }
+            }
+
+            & li:last-child a {
+                color: var(--szin);
+                position: relative;
+            }
+
+            /* kis kor alatta */
+            & li:last-child a::before {
+                border-radius: 100%;
+                position: absolute;
+                background: var(--szin);
+                height: 0.5vw;
+                width: 0.5vw;
+                content: '';
+                top: 120%;
+                left: 45%;
+            }
+
+            /* dropdown */
+            & li:nth-child(2), li:nth-child(3) {
+                position: relative;
+            }
+
+            & li:nth-child(2):hover div, li:nth-child(3):hover div {
+                display: flex;
+            }
+
+            & li:nth-child(2) div, li:nth-child(3) div {
+                display: none;
+                position: absolute;
+                width: 12.5vw;
+                height: 6vh;
+                background-color: #fff; 
+                border: 2px solid var(--szin);
+                border-radius: 0.25vw;
+
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                & .csik {
+                    width: 80%;
+                    height: 1px;
+                    border-radius: 2px;
+                    background: var(--szurke);
+                }
+
+                & a {
+                    font-size: 0.8vw;
+                }
+            }
+        }
+    }
+
+    /* jobb fenti kor */
+    &::before {
+        content: '';
+        position: absolute;
+        width: 9vw;
+        height: 9vw;
+        border-radius: 100%;
+        background: var(--szin);
+        top: -4.5vw;
+        right: -4.5vw;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    .kezdolap {
+        display: flex;
+        align-items: stretch;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+
+        & div {
+            width: 80%;
+            margin-right: 10%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            & h1 {
+                font-size: 4vw;
+                font-weight: 600;
+                color: var(--szin);
+            }
+
+            & i {
+                font-size: 1.5vw;
+                font-weight: 600;
+                color: var(--szurke);
+            }
+
+            & p {
+                font-size: 1.125vw;
+                color: var(--szurke);
+            }
+            
+            /* ez a gomboknak */
+            & section {
+                flex-direction: row;
+                display: flex;
+                gap: 2vw;
+
+                & button {
+                    width: 50%;
+                    font-weight: 500;
+                }
+
+                & button:nth-child(1) {
+                    box-shadow: 0px 15px 25px -20px rgba(0,0,0,1);
+                }
+            }
+        }
+
+        & img {
+            width: 35vw;
+            height: 70vh;
+            object-fit: cover;
+
+            border-radius: 0.75vw;
+            box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.25);
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 9vw;
+            height: 9vw;
+            border-radius: 100%;
+            background: var(--szin);
+            bottom: -4.5vw;
+            left: -4.5vw;
+        }
+    }
+    
+    .arlistaWrapper {
+        width: 80%;
+        margin: 0 auto;
+
+        color: var(--szin);
+        position: relative;
+        z-index: 1;
+        margin-bottom: 15vh;
+        
+        & h1 {    
+            text-align: center;
+            font-weight: 600;
+            font-size: 2vw;
+            margin-top: 7vh;
+            margin-bottom: 7vh;
+        }
+
+        .arlista {
+            border: solid 3px var(--szin);
+            box-shadow: 0 4px 3px 0px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 1;
+
+            .elemekWrapper {
+                padding: 3vw;
+                background-color: white;
+
+                .arlistaElem:last-child {
+                    margin-bottom: 1vh;
+                }
+
+                .arlistaElem {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 2px var(--szurke) dotted;
+                    margin-bottom: 5vh;
+
+                    & p, span {
+                        font-size: 1.5vw;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10vw;
+                height: 10vw;
+                border-radius: 50%;
+                background: var(--szin);
+                bottom: -5vw;
+                left: -5vw;
+                z-index: -1;
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10vw;
+                height: 10vw;
+                border-radius: 50%;
+                background: var(--szin);
+                top: -5vw;
+                right: -5vw;
+                z-index: -1;
+            }
+        }
+    }
+    
+    .footer {
+        width: 100%;
+        background-color: var(--szin);
+        color: white;
+
+        & .wrapper {
+            margin: 1vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & img {
+                width: 20vw;
+            }
+
+            & .elerhetosegek, .ajanlott, .social {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                align-self: flex-start;
+                padding-top: 2vh;
+
+                & a {
+                    color: white;
+                }
+
+                & .csik {
+                    width: 100%;
+                    height: 1px;
+                    border-radius: 2px;
+                    background: white;
+                }
+
+                & h4 {
+                    font-size: 1vw;
+                    font-weight: 500;
+                    margin-bottom: 1vh;
+                }
+
+                & i {
+                    font-size: 2vw;
+                }
+
+                & .logok {
+                    display: flex;
+                    gap: 1vw;
+                }
+            }
+        }
+
+        & .szoveg {
+            text-align: center;
+            padding: 0.25vw;
+            font-size: 1vw;
+            margin-top: 2.5vh;
+            margin-bottom: 2vh;
+
+            & a {
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.backgroundWrapper {
+    position: relative;
+}
+
+.backgroundWrapper::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(../kepek/background.jpg) no-repeat center center;
+    mix-blend-mode: luminosity;
+
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .solidGomb, .atlatszoGomb {
+        font-size: 3.5vw;
+        border-radius: 2vw;
+        padding: 2.25vw 4vw;
+    }
+
+    .mobilNav {
+        display: flex;
+        
+        & .sidebarBack {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: left;
+            
+            & i {
+                padding-left: 5%;
+                font-size: 10vw;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        & .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            padding: 5vw;
+            transform: translateX(200%);
+            transition: transform 0.5s ease;
+            border-top-left-radius: 5vw;
+
+            & nav {
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+                height: 90%;
+
+                & ul {
+                    height: inherit;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5vh;
+                    color: black;
+                    font-weight: 600;
+                    justify-content: space-evenly;
+                    font-size: 4vw;
+
+                    & .csik {
+                        margin-top: 0.5vh;
+                        width: 80%;
+                        height: 1px;
+                        border-radius: 2px;
+                        background: var(--szurke);
+                    }
+
+                    .tudnivalokDiv, .tetovalasokDiv {
+                        display: none;
+                        flex-direction: column;
+                        gap: 2vh;
+                        margin-top: 2vh;
+                        padding: 2vh 2vw;
+                        border: 2px solid var(--szin);
+                        border-radius: 2vw;
+                    }
+                    
+                }
+            
+            }
+        }
+    }
+
+    header {
+        justify-content: space-between;
+
+        & .mobil {
+            display: flex;
+            margin-right: 10vw;
+            color: var(--szin);
+            font-size: 5vw;
+            z-index: 1;
+        }
+
+        & img {
+            width: 35vw;
+            margin-left: 8vw;
+        }
+
+        & .desktopNav {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    main {
+        .kezdolap {
+            flex-direction: column;
+            align-items: center;
+
+            & div {
+                width: 100%;
+                margin-right: 0;
+                text-align: center;
+
+                & h1 {
+                    font-size: 8vw;
+                    width: 100%;
+                }
+
+                & i {
+                    font-size: 3vw;
+                }
+
+                & p {
+                    margin-top: 2vh;
+                    margin-bottom: 2vh;
+                    font-size: 3vw;
+                    align-self: center;
+                }
+
+                & section {
+                    flex-direction: column;
+                    gap: 2vh;
+
+                    & button {
+                        width: 80%;
+                        align-self: center
+                    }
+                }
+            }
+
+            & img {
+                width: 80vw;
+                height: 50vh;
+                margin-top: 5vh;
+                border-radius: 3vw;
+            }
+
+            &::before {
+                height: 20vw;
+                width: 20vw;
+                bottom: -10vw;
+                left: -10vw;
+            }
+        }
+
+        .arlistaWrapper {
+            margin-bottom: 10vh;
+
+            & h1 {
+                font-size: 6vw;
+                margin-top: 8vh;
+                margin-bottom: 8vh;
+            }
+
+            & .arlista {
+                & .elemekWrapper {
+                    & .arlistaElem {
+                        & p, span {
+                            font-size: 4.5vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            & .wrapper {
+                flex-direction: column;
+                gap: 2.5vh;
+                align-items: center;
+                margin-bottom: 2.5vh;
+
+                & .logo {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 2.5vh;
+
+                    & img {
+                        width: 85%;
+                    }
+                }
+
+                & .elerhetosegek, .ajanlott, .social {
+                    align-self: center;
+                    padding-top: 5vh;
+                    text-align: center;
+
+                    & h4 {
+                        font-size: 3.5vw;
+                        margin-bottom: 2.5vh;
+                    }
+
+                    & i {
+                        font-size: 7vw;
+                    }
+
+                    & .logok {
+                        gap: 5vw;
+                        align-self: center;
+                    }
+                }
+            }
+
+            & .szoveg {
+                font-size: 3vw;
+            }
+        }
+    }
+}
