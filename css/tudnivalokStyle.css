@@ -415,6 +415,52 @@ main {
         }
     }
 
+    main {
+        .cim {
+            & h1 {
+                font-size: 10vw;
+            }
+        }
+
+        .elsoResz, .masodikResz {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            width: 90%;
+
+            & img {
+                width: 80%;
+                height: 40vh;
+                margin-bottom: 5vh;
+                border-radius: 3vw;
+            }
+
+            .szoveg {
+                width: 100%;
+
+                .wrapper {
+                    width: 80%;
+                    text-align: center;
+
+                    & h1 {
+                        font-size: 6vw;
+                        text-align: center;
+                    }
+
+                    & span {
+                        font-size: 3.5vw;
+                    }
+                }
+
+                .left {
+                    align-self: center;
+                
+                }
+            }
+        }
+    }
+
     header {
         justify-content: space-between;
 
@@ -536,4 +582,6 @@ main {
             }
         }
     }
+
+
 }
