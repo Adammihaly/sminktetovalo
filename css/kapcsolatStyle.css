@@ -59,7 +59,7 @@ body {
 header {
     display: flex;
     align-items: center;
-
+    margin-bottom: 3vh;
     position: relative;
     overflow: hidden;
 
@@ -101,13 +101,13 @@ header {
                 }
             }
 
-            & .tudnivalokA {
-                position: relative;
+            & li:nth-child(5) a {
                 color: var(--szin);
+                position: relative;
             }
 
             /* kis kor alatta */
-            & .tudnivalokA::before {
+            & li:nth-child(5) a::before {
                 border-radius: 100%;
                 position: absolute;
                 background: var(--szin);
@@ -115,7 +115,7 @@ header {
                 width: 0.5vw;
                 content: '';
                 top: 120%;
-                left: 45%;
+                left: 50%;
             }
 
             /* dropdown */
@@ -173,77 +173,76 @@ main {
     position: relative;
     overflow: hidden;
 
-    .cim {
-        & h1 {
-            font-size: 3vw;
-            margin-top: 8vh;
-            margin-bottom: 10vh;
-            font-weight: 600;
-            text-align: center;
-            color: var(--szin);
-        }
-    }
-
-    .elsoResz, .masodikResz {
+    .kapcsolat {
         display: flex;
-        justify-content: center;
-        background: white;
+        flex-direction: column;
+        align-items: center;
         width: 80%;
         margin: 0 auto;
-        margin-bottom: 12.5vh;
-        margin-top: 12.5vh;
 
-        & img {
-            width: 50%;
-            height: 80vh;
-            box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.25);
-            object-fit: cover;
-            border-radius: 0.75vw;
+        & h3 {
+            font-size: 3.5vw;
+            color: var(--szin);
+            font-weight: 600;
+            text-align: center;
+            margin-top: 12.5vh;
+            margin-bottom: 2.5vh;
         }
 
-        & .szoveg {
+        & span {
+            font-size: 1.125vw;
+            color: var(--szurke);
+            margin-bottom: 10vh;
+            text-align: center;
+        }
+
+        & .wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: 10vh;
+        }
+
+        & form {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            gap: 2.5vh;
+            width: 40%;
 
-            & .wrapper {
-                width: 70%;
-
-                & h1 {
-                    font-size: 3vw;
-                    color: var(--szurke);
-                    font-weight: 600;
-                    margin-bottom: 2.5vh;
-                    margin-top: 0;
-                    text-align: left;
-                }
-    
-                .csik {
-                    width: 100%;
-                    height: 2px;
-                    border-radius: 2px;
-                    background: var(--szin);
-                    margin-bottom: 2.5vh;
-                }
-        
-                & span {
-                    font-size: 1.125vw;
-                    color: var(--szurke);
-                    margin-bottom: 2.5vh;
-                    font-weight: 300;
-                    display: block;
-                }
+            & label {
+                font-size: 1.125vw;
+                color: black;
             }
 
-            & .left {
-                align-self: flex-start;
+            & div {
+                display: flex;
+                flex-direction: column;
+                gap: .5vh;
             }
 
-            & .right {
+            & input, textarea {
+                padding: 1vw 2vw;
+                border-radius: 0.5vw;
+                border: 0;
+                font-size: 1.125vw;
+                font-family: var(--font);
+
+                color: var(--szurke);
+                background-color: rgba(167, 105, 126, 0.15);
+            }
+
+            & button {
+                width: 33%;
                 align-self: center;
             }
         }
-        
+
+        & iframe {
+            width: 50%;
+            border: 3px solid var(--szin);
+            border-radius: 0.75vw;
+            box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.25);
+        }
     }
     
     .footer {
@@ -415,56 +414,6 @@ main {
         }
     }
 
-    main {
-        .cim {
-            & h1 {
-                font-size: 10vw;
-            }
-        }
-
-        .elsoResz, .masodikResz {
-            flex-direction: column;
-            align-items: center;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
-            width: 90%;
-
-            & img {
-                width: 80%;
-                height: 40vh;
-                margin-bottom: 5vh;
-                border-radius: 3vw;
-            }
-
-            .szoveg {
-                width: 100%;
-
-                .wrapper {
-                    width: 80%;
-                    text-align: center;
-
-                    & h1 {
-                        font-size: 6vw;
-                        text-align: center;
-                    }
-
-                    & span {
-                        font-size: 3.5vw;
-                    }
-                }
-
-                .left {
-                    align-self: center;
-                
-                }
-            }
-        }
-
-        .masodikResz {
-            flex-direction: column-reverse;
-        }
-    }
-
     header {
         justify-content: space-between;
 
@@ -491,54 +440,54 @@ main {
     }
 
     main {
-        .kezdolap {
-            flex-direction: column;
-            align-items: center;
+        .backgroundWrapper {
+            position: relative;
+        }
 
-            & div {
+        .kapcsolat {
+            & h3 {
+                font-size: 7vw;
+                margin-top: 5vh;
+                margin-bottom: 2.5vh;
+            }
+
+            & span {
+                font-size: 3.5vw;
+                margin-bottom: 5vh;
+            }
+
+            & .wrapper {
+                flex-direction: column;
+                gap: 5vh;
                 width: 100%;
-                margin-right: 0;
-                text-align: center;
+                margin-bottom: 5vh;
+            }
 
-                & h1 {
-                    font-size: 8vw;
-                    width: 100%;
+            & form {
+                width: 100%;
+                align-self: center;
+
+                & label {
+                    font-size: 3.5vw;
                 }
 
-                & i {
-                    font-size: 3vw;
+                & input, textarea {
+                    padding: 3vw 6vw;
+                    font-size: 3.5vw;
+                    border-radius: 1.5vw;
                 }
 
-                & p {
-                    margin-top: 2vh;
-                    margin-bottom: 2vh;
-                    font-size: 3vw;
+                & button {
+                    width: 50%;
                     align-self: center;
                 }
-
-                & section {
-                    flex-direction: column;
-                    gap: 2vh;
-
-                    & button {
-                        width: 80%;
-                        align-self: center
-                    }
-                }
             }
 
-            & img {
-                width: 80vw;
-                height: 50vh;
-                margin-top: 5vh;
-                border-radius: 3vw;
-            }
-
-            &::before {
-                height: 20vw;
-                width: 20vw;
-                bottom: -10vw;
-                left: -10vw;
+            & iframe {
+                width: 95%;
+                height: 65vh;
+                margin: 0 auto;
+                margin-bottom: 2.5vh;
             }
         }
 
@@ -586,6 +535,4 @@ main {
             }
         }
     }
-
-
 }
