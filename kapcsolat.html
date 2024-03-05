@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/arlistaStyle.css">
+    <link rel="stylesheet" href="./css/kapcsolatStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4210abefe.js" crossorigin="anonymous"></script>
-    <script defer src="../script/mobilnavScript.js"></script>
+    <script defer src="./script/mobilnavScript.js"></script>
     <title>Permanent Makeup</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <nav>
                     <ul>
                         <div>
-                        <li><a href="./kezdolap.html">Bemutatkozás</a></li>
+                        <li><a href="">Bemutatkozás</a></li>
                         <section class="csik"></section>
                         </div>
 
@@ -35,9 +35,9 @@
 
                         <li class="tudnivalok">Tudnivalók <i class="fa-solid fa-angle-down"></i>
                             <div class="tudnivalokDiv">
-                                <a href="">Tetoválás előtt</a>
+                                <a href="./tudnivalok.html#tetovalasElott">Tetoválás előtt</a>
                                 <section class="csik"></section>
-                                <a href="">Tetoválás után</a>
+                                <a href="./tudnivalok.html#tetovalasUtan">Tetoválás után</a>
                             </div>
                         </li>
 
@@ -59,16 +59,16 @@
                 </nav>
             </div>
         </div>
-        
+
         <!-- kezdolap + nav -->
         <div class="backgroundWrapper">
         <header>
-            <img src="../kepek/logo.png" alt="">
+            <img src="./kepek/logo.png" alt="">
             <i class="fa-solid fa-bars mobil"></i>
             <nav class="desktopNav">
                 <ul>
                     <li><a href="./kezdolap.html">Bemutatkozás</a></li>
-                    <li><a href="">Tetoválások</a> <i class="fa-solid fa-angle-down"></i>
+                    <li><a href="" class="tetovalasokA">Tetoválások</a> <i class="fa-solid fa-angle-down"></i>
                     <div>
                         <a href="./mellbimborek.html">Mellbimbó rekonstruáció</a>
                         <section class="csik"></section>
@@ -88,96 +88,38 @@
                 </ul>
             </nav>
         </header>
-        <section class="kezdolap">
-            <div>
-                <div>
-                <h1>Lorem ipsum</h1>
-                <i>- lorem ipsum dolor sit amet</i>
-                </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, totam. Facilis soluta accusamus cum odit sunt accusantium earum, ut deserunt doloremque? Officiis, laboriosam quisquam cum harum tenetur officia aperiam adipisci quod quo! Ratione, repellat. Neque.</p>
-                <section>
-                    <button class="solidGomb" id="mellbimrekGomb" onclick="window.location.href='./mellbimborek.html'">Mellbimbó rekonstruáció</button>
-                    <button class="atlatszoGomb" id="sminktetGomb" onclick="window.location.href='./sminktetovalas.html'">Sminktetoválás</button>
-                </section>
-            </div>
-            <img src="../kepek/annie-spratt-lIbLVVIr-6w-unsplash.jpg" alt="">
-        </section>
         </div>
 
-        <section class="arlistaWrapper">
-            <h1>Árlista</h1>
-            <div class="arlista">
-                <div class="elemekWrapper">
-                <div class="arlistaElem">
-                    <p>Púderes szemöldök tetoválás + 1 korrekció</p>
-                    <span>80.000 Ft</span>
+        <section class="kapcsolat">
+            <h3>Kapcsolat / Bejelentkezés</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum non repudiandae quo ratione optio sequi, sed libero minus beatae qui quam ullam omnis esse. Iure doloribus facilis accusamus, deleniti illum vero iste ullam magnam atque? Ipsum dignissimos optio hic officiis? Labore, quia! Voluptatum enim harum assumenda ratione animi a dignissimos.</span>
+            <div class="wrapper">
+            <form action="">
+                <div>
+                    <label for="name">Név</label>
+                    <input type="text" id="name" placeholder="Vezeték és keresztnév" required="required">
                 </div>
-                <div class="arlistaElem">
-                    <p>Szálazott szemöldök tetoválás + 1 korrekció</p>
-                    <span>80.000 Ft</span>
+
+                <div>
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" placeholder="pelda@gmail.com" required="required">
                 </div>
-                <div class="arlistaElem">
-                    <div>
-                        <p>Hybrid tetoválás + 1 korrekció</p>
-                        <span>(szálazott és púderes technika együtt)</span>
-                    </div>
-                    <span>90.000 Ft</span>
+
+                <div>
+                    <label for="message">Üzenet</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Ide írhatja az üzenetét..." required="required"></textarea>
                 </div>
-                <div class="arlistaElem">
-                    <div>
-                        <p>Aerola mellenként + 1 korrekció</p>
-                        <span>(mellbimbó rekonstrukció)</span>
-                    </div>
-                    <span>70.000 Ft</span>
-                </div>
-                <div class="arlistaElem">
-                    <div>
-                        <p>Plusz sminktetoválás korrekció</p>
-                        <span>(12 hét elteltével 6 hónapon belül)</span>
-                    </div>
-                    <span>20.000 Ft</span>
-                </div>
-                <div class="arlistaElem">
-                    <div>
-                        <p>Golnk Tetoválás eltávolítás</p>
-                        <span>(terület nagyságától függően)</span>
-                    </div>
-                    <section>
-                        <span>20.000 - 40.000 Ft</span>
-                        <h6>/alkalom</h6>
-                    </section>
-                    
-                </div>
-                <div class="arlistaElem">
-                    <div>
-                        <p>Fibróma eltávolítás</p>
-                        <span>(vadhús)</span>
-                    </div>
-                    <section>
-                        <span>10.000 Ft</span>
-                        <h6>-tól</h6>
-                    </section>
-                </div>
-                <div class="arlistaElem">
-                    <p>Konzultáció 30 perc</p>
-                    <span>10.000 Ft</span>
-                </div>
-                <div class="arlistaElem">
-                    <p>Konzultáció 60 perc</p>
-                    <span>20.000 Ft</span>
-                </div>
-                <div class="arlistaElem">
-                    <p>Allergia teszt tetováláshoz</p>
-                    <span>2.000 Ft</span>
-                </div>
-                </div>
+
+                <button class="solidGomb">Küldés</button>
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.124013766452!2d19.044923343270124!3d47.50697602459223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc1046d4a33d%3A0x342122b8ff8f0f6e!2sHungarian%20Parliament%20Building!5e0!3m2!1sen!2srs!4v1707575281328!5m2!1sen!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
         <section class="footer">
             <div class="wrapper">
                 <div class="logo">
-                    <img src="../kepek/logofeher.png" alt="">
+                    <img src="./kepek/logofeher.png" alt="">
                 </div>
                 <div class="elerhetosegek">
                     <div>
