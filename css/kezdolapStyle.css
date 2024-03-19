@@ -331,7 +331,7 @@ main {
                 }
 
                 & span {
-                    font-size: 1.125vw;
+                    font-size: 1.25vw;
                     color: var(--szurke);
                     margin-bottom: 2.5vh;
                 }
@@ -438,6 +438,24 @@ main {
             margin-bottom: 2.5vh;
         }
 
+        & .kapSzoveg {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 5vh;
+            font-size: 1.25vw;
+
+            & span {
+                margin-bottom: 0;
+                font-size: 1.25vw;
+            }
+
+            & ul {
+                color: var(--szurke);
+                list-style: none;
+            }
+        }
+
         & span {
             font-size: 1.125vw;
             color: var(--szurke);
@@ -469,7 +487,7 @@ main {
                 gap: .5vh;
             }
 
-            & input, textarea {
+            & input, textarea, select {
                 padding: 1vw 2vw;
                 border-radius: 0.5vw;
                 border: 0;
@@ -895,6 +913,14 @@ main {
                 margin-bottom: 5vh;
             }
 
+            & .kapSzoveg {
+                font-size: 3.5vw;
+
+                & span {
+                    font-size: 3.5vw;
+                }
+            }
+
             & form {
                 width: 100%;
                 align-self: center;
@@ -903,7 +929,7 @@ main {
                     font-size: 3.5vw;
                 }
 
-                & input, textarea {
+                & input, textarea, select {
                     padding: 3vw 6vw;
                     font-size: 3.5vw;
                     border-radius: 1.5vw;
