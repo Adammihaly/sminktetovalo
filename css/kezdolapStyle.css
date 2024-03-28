@@ -247,6 +247,7 @@ main {
     
     .szalonrolWrapper {
         position: relative;
+        margin-top: 10vh;
 
         & .mobilKepek {
             display: none;

@@ -63,6 +63,8 @@ header {
     position: relative;
     overflow: hidden;
 
+    margin-bottom: 3vh;
+
     & img {
         width: 18vw;
         margin-left: 2vw;
@@ -735,8 +737,9 @@ main {
                 margin-top: 5vh;
                 margin-bottom: 5vh;
                 font-size: 7vw;
-                width: 50%;
+                width: 100%;
                 align-self: center;
+                text-align: center;
             }
 
             & .wrapper {
