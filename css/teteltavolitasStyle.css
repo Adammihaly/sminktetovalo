@@ -194,7 +194,7 @@ main {
         margin-top: 12.5vh;
 
         & img {
-            width: 50%;
+            width: 40%;
             height: 80vh;
             box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.25);
             object-fit: cover;

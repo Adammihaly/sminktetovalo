@@ -224,7 +224,7 @@ main {
         }
 
         & img {
-            width: 35vw;
+            width: 27.5vw;
             height: 70vh;
             object-fit: cover;
 
@@ -259,14 +259,18 @@ main {
             flex-direction: column;
             width: 55%;
 
+            #kremkepDiv {
+                background: url(../kepek/ujkepek/kremek.jpg) center/cover no-repeat;
+            }
+
             & .kep {
-                background: url(../kepek/annie-spratt-Zxl_m4KVZDs-unsplash.jpg) center/cover no-repeat;
+                background: url(../kepek/ujkepek/szemjobb.jpg) center/cover no-repeat;
                 border-radius: 0.5vw;
                 width: 100%;
                 height: 62.5vh;
                 position: relative;
             }
-            
+
             & img {
                 width: 100%;
                 height: 80vh;
