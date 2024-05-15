@@ -230,7 +230,6 @@ main {
 
             border-radius: 0.75vw;
             box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.25);
-
         }
 
         &::before {
@@ -382,7 +381,12 @@ main {
             
             .osz12 { grid-area: osz12; }
             
-            .osz21 { grid-area: osz21; }
+            .osz21 { 
+                grid-area: osz21;
+                & img {
+                    object-position: 75%;
+                }
+            }
             
             .osz22 { grid-area: osz22; }
             

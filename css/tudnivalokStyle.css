@@ -174,13 +174,24 @@ main {
     overflow: hidden;
 
     .cim {
+
         & h1 {
             font-size: 3vw;
             margin-top: 8vh;
-            margin-bottom: 10vh;
+            margin-bottom: 5vh;
             font-weight: 600;
             text-align: center;
             color: var(--szin);
+        }
+
+        & img {
+            position: relative;
+            width: 50vw;
+            object-fit: contain;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 0.5vw;
+            margin-bottom: 2.5vh;
         }
     }
 
@@ -399,6 +410,11 @@ main {
         .cim {
             & h1 {
                 font-size: 10vw;
+            }
+            
+            & img {
+                width: 90vw;
+                border-radius: 2vw;
             }
         }
 

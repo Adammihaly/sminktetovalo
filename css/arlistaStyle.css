@@ -62,6 +62,7 @@ header {
 
     position: relative;
     overflow: hidden;
+    margin-bottom: 2.5vh;
 
     & img {
         width: 18vw;
