@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4210abefe.js" crossorigin="anonymous"></script>
     <script defer src="./script/mobilnavScript.js"></script>
+    <script defer src="./script/uszasScript.js"></script>
     <title>Peller Judit - Sminktetováló</title>
 </head>
 <body>
@@ -51,6 +52,11 @@
                         </div>
 
                         <div>
+                            <li><a href="./galeria.html">Galéria</a></li>
+                            <section class="csik"></section>
+                        </div>
+
+                        <div>
                         <li><a href="./arlista.html">Árlista</a></li>
                         <section class="csik"></section>
                         </div>
@@ -83,6 +89,7 @@
                     </li>
                     <li><a href="./tudnivalok.html" class="tudnivalokA">Tudnivalók</a></li>
                     <li><a href="./kapcsolat.html">Kapcsolat</a></li>
+                    <li><a href="./galeria.html">Galéria</a></li>
                     <li><a href="./arlista.html">Árlista</a></li>
                 </ul>
                 <img src="./kepek/logo.png" alt="">
@@ -91,9 +98,9 @@
         </header>
 
         <section class="kezdolap">
-            <div>
+            <div class="kezdolapLeiras">
                 <div>
-                <i>- A tiszta lelkesedés, naiv ösztön, ami felnőtt művésznél ritka adomány: minden egészséges gyermekben megvan.</i>
+                <i>A tiszta lelkesedés, naiv ösztön, ami felnőtt művésznél ritka adomány: minden egészséges gyermekben megvan.</i> <br>
                 <i>- Kodály Zoltán</i>
                 </div>
                 <p>
@@ -103,7 +110,7 @@
                     Az én utam 13 éve kezdődött kozmetikusként, mindenben és mindenkiben kerestem a szépet. 2023-ban elhatároztam, hogy a sminktetoválással szeretnék maradandót alkotni, amivel szebbé tehetem az emberek életét; növelhetem, visszaadhatom az önbecsülésüket.
                 </p>
             </div>
-            <img src="./kepek/ujkepek/onkep.jpeg" alt="">
+            <img id="onkep" src="./kepek/ujkepek/onkep.jpeg" alt="">
         </section>
         </div>
 
@@ -154,49 +161,49 @@
         <section class="kapcsolat">
             <h3>Kapcsolat / Bejelentkezés</h3>
             <div class="kapSzoveg">
-                <span>Bejelentkezés lehetséges:</span>
-                    <ul>
-                        <li>Emailben: <a href="mailto:juditpeller.pmuartist@gmail.com">juditpeller.pmuartist@gmail.com</a></li>
-                        <li>Online bejelentkező rendszerben: <a href="https://juditpeller-pmuartist.salonic.hu">https://juditpeller-pmuartist.salonic.hu</a></li>
-                        <li>Vagy az oldal alján található űrlap kitöltésével</li>
-                    </ul>
+            <span>Bejelentkezés lehetséges:</span>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> Emailben: <a href="mailto:juditpeller.pmuartist@gmail.com">juditpeller.pmuartist@gmail.com</a></li>
+                    <li><i class="fa-solid fa-calendar-check"></i> Online bejelentkező rendszerben: <a href="https://juditpeller-pmuartist.salonic.hu">https://juditpeller-pmuartist.salonic.hu</a></li>
+                    <li>Vagy az oldal alján található űrlap kitöltésével</li>
+                </ul>
+            </div>
+            <div class="wrapper">
+            <form action="" class="balObserve">
+                <div>
+                    <label for="name">Név</label>
+                    <input type="text" id="name" placeholder="Vezeték és keresztnév" required="required">
                 </div>
-                <div class="wrapper">
-                <form action="">
-                    <div>
-                        <label for="name">Név</label>
-                        <input type="text" id="name" placeholder="Vezeték és keresztnév" required="required">
-                    </div>
-    
-                    <div>
-                        <label for="email">E-mail cím</label>
-                        <input type="email" id="email" placeholder="pelda@gmail.com" required="required">
-                    </div>
-                    
-                    <div>
-                        <label for="szolgaltatas">Szolgáltatás</label>
-                        <select id="szolgaltatas" required="required">
-                            <option value="" disabled selected>Válasszon szolgáltatást</option>
-                            <option value="mellbimborek">Mellbimbó rekonstrukció</option>
-                            <option value="sminktetovalas">Sminktetoválás</option>
-                            <option value="teteltavolitas">Tetoválás eltávolítás</option>
-                            <option value="fibromaeltavolitas">Fibróma eltávolítás</option>
-                        </select>
-                    </div>
-    
-                    <div>
-                        <label for="datetime">Dátum és idő</label>
-                        <input type="datetime-local" id="datetime" required="required">
-                    </div>
-    
-                    <div>
-                        <label for="message">Üzenet</label>
-                        <textarea id="message" cols="30" rows="10" placeholder="Ide írhatja az üzenetét..." required="required"></textarea>
-                    </div>
-    
-                    <button class="solidGomb">Küldés</button>
-                </form>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.2405681557893!2d18.90725447691275!3d47.62145478695079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a77630af77945%3A0x5b79ba1fb3b6f7c2!2zUGlsaXN2w7Zyw7ZzdsOhciwgRsWRIHUuIDgzLCAyMDg1IE1hZ3lhcm9yc3rDoWc!5e0!3m2!1shu!2srs!4v1710432321107!5m2!1shu!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div>
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" placeholder="pelda@gmail.com" required="required">
+                </div>
+                
+                <div>
+                    <label for="szolgaltatas">Szolgáltatás</label>
+                    <select id="szolgaltatas" required="required">
+                        <option value="" disabled selected>Válasszon szolgáltatást</option>
+                        <option value="sminktetovalas">Sminktetoválás</option>
+                        <option value="mellbimborek">Mellbimbó rekonstrukció</option>
+                        <option value="teteltavolitas">Tetoválás eltávolítás</option>
+                        <option value="fibromaeltavolitas">Fibróma eltávolítás</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="datetime">Dátum és idő</label>
+                    <input type="datetime-local" id="datetime" required="required">
+                </div>
+
+                <div>
+                    <label for="message">Üzenet</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Ide írhatja az üzenetét..." required="required" ></textarea>
+                </div>
+
+                <button class="solidGomb">Küldés</button>
+            </form>
+            <iframe class="jobbObserve" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.2405681557893!2d18.90725447691275!3d47.62145478695079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a77630af77945%3A0x5b79ba1fb3b6f7c2!2zUGlsaXN2w7Zyw7ZzdsOhciwgRsWRIHUuIDgzLCAyMDg1IE1hZ3lhcm9yc3rDoWc!5e0!3m2!1shu!2srs!4v1710432321107!5m2!1shu!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
@@ -243,5 +250,13 @@
             </div>
         </section>
     </main>
+
+    <script type="module">
+        import { translateToZero, observe } from './script/uszasScript.js';
+
+        translateToZero('kezdolapLeiras');
+        translateToZero('onkep', true);
+        observe('szalonrol', ['szalonKepek', 'szoveg']);
+    </script>
 </body>
 </html>

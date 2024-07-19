@@ -223,10 +223,18 @@ main {
             border-radius: 0.75vw;
         }
 
+        & .balObserve {
+            transform: translate(-500%);
+            transition: transform 1s ease-in-out;
+        }
+
         & .szoveg {
             display: flex;
             flex-direction: column;
             width: 70%;
+
+            transform: translate(500%);
+            transition: transform 1s ease-in-out;
 
             & .wrapper {
                 width: 80%;

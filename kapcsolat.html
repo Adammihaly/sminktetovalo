@@ -51,6 +51,11 @@
                         </div>
 
                         <div>
+                            <li><a href="./galeria.html">Galéria</a></li>
+                            <section class="csik"></section>
+                        </div>
+
+                        <div>
                         <li><a href="./arlista.html">Árlista</a></li>
                         <section class="csik"></section>
                         </div>
@@ -82,6 +87,7 @@
                     </li>
                     <li><a href="./tudnivalok.html" class="tudnivalokA">Tudnivalók</a></li>
                     <li><a href="./kapcsolat.html">Kapcsolat</a></li>
+                    <li><a href="./galeria.html">Galéria</a></li>
                     <li><a href="./arlista.html">Árlista</a></li>
                 </ul>
                 <img src="./kepek/logo.png" alt="">
@@ -100,7 +106,7 @@
                 </ul>
             </div>
             <div class="wrapper">
-            <form action="">
+            <form action="" class="balObserve">
                 <div>
                     <label for="name">Név</label>
                     <input type="text" id="name" placeholder="Vezeték és keresztnév" required="required">
@@ -134,7 +140,7 @@
 
                 <button class="solidGomb">Küldés</button>
             </form>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.2405681557893!2d18.90725447691275!3d47.62145478695079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a77630af77945%3A0x5b79ba1fb3b6f7c2!2zUGlsaXN2w7Zyw7ZzdsOhciwgRsWRIHUuIDgzLCAyMDg1IE1hZ3lhcm9yc3rDoWc!5e0!3m2!1shu!2srs!4v1710432321107!5m2!1shu!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="jobbObserve" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.2405681557893!2d18.90725447691275!3d47.62145478695079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a77630af77945%3A0x5b79ba1fb3b6f7c2!2zUGlsaXN2w7Zyw7ZzdsOhciwgRsWRIHUuIDgzLCAyMDg1IE1hZ3lhcm9yc3rDoWc!5e0!3m2!1shu!2srs!4v1710432321107!5m2!1shu!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
@@ -181,5 +187,12 @@
             </div>
         </section>
     </main>
+
+    <script type="module">
+        import { translateToZero, observe } from './script/uszasScript.js';
+
+        translateToZero('balObserve');
+        translateToZero('jobbObserve');
+    </script>
 </body>
 </html>

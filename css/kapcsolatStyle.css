@@ -219,6 +219,16 @@ main {
             justify-content: space-evenly;
             width: 100%;
             margin-bottom: 10vh;
+
+            & .balObserve {
+                transform: translate(-500%);
+                transition: transform 1s ease-in-out;
+            }
+
+            & .jobbObserve {
+                transform: translate(500%);
+                transition: transform 1s ease-in-out;
+            }
         }
 
         & .kapSzoveg {
@@ -262,6 +272,7 @@ main {
                 border: 0;
                 font-size: 1.125vw;
                 font-family: var(--font);
+                resize: none;
 
                 color: var(--szurke);
                 background-color: rgba(167, 105, 126, 0.15);

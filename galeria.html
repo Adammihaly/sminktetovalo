@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/arckezelesekStyle.css">
+    <link rel="stylesheet" href="./css/galeriaStyle.css">
     <link rel="icon" type="image/png" href="./kepek/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4210abefe.js" crossorigin="anonymous"></script>
     <script defer src="./script/mobilnavScript.js"></script>
-    <title>Arckezelések</title>
+    <script defer src="./script/galeriaScript.js"></script>
+    <title>Galéria</title>
 </head>
 <body>
     <main>
@@ -95,29 +96,31 @@
         </header>
         </div>
 
-        <div class="hamarosan">
-            <h1>Termikus ionizáció</h1>
-            <i>Hamarosan...</i>
+        <div class="expandPicture">
+            <i class="fa-solid fa-x"></i>
+            <img id="expandedPicElement" src="kepek/favicon.png" alt="">
         </div>
 
-        <div class="hamarosan">
-            <h1>Hyaluron pen ráncfeltöltés</h1>
-            <i>Hamarosan...</i>
-        </div>
-
-        <div class="hamarosan">
-            <h1>Carbon peeling</h1>
-            <i>Hamarosan...</i>
-        </div>
-
-        <div class="hamarosan">
-            <h1>Pigmentfolt halványítás</h1>
-            <i>Hamarosan...</i>
-        </div>
-
-        <div class="hamarosan">
-            <h1>Ajakfeltöltés</h1>
-            <i>Hamarosan...</i>
+        <div class="galeriaWrapper">
+            <h1>Galéria</h1>
+            <section class="hajszalCsik"></section>
+            <h1>Szalon</h1>
+            <div class="galeria elsoGaleria">
+                <img src="kepek/ujkepek/szemjobb.jpg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/szemoldok.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/szemtorles.jpg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/szinsziv.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/tetgepink.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/tetinkcsopp.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/vlmipapir.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/szaj.jpeg" class="img169" onclick="expand(this)" alt="">
+                <img src="kepek/ujkepek/szinek.jpeg" class="img169" onclick="expand(this)" alt="">
+            </div>
+            <section class="hajszalCsik masodikObserve"></section>
+            <h1>Munkáim</h1>
+            <div class="galeria masodikGaleria">
+                <img src="kepek/ujkepek/tempera.jpg" class="img169" onclick="expand(this)" alt="">
+            </div>
         </div>
 
         <section class="footer">
@@ -163,5 +166,12 @@
             </div>
         </section>
     </main>
+
+    <script type="module">
+        import { translateToZero, observe } from './script/uszasScript.js';
+
+        translateToZero('elsoGaleria');
+        observe('masodikObserve', ['masodikGaleria']);
+    </script>
 </body>
 </html>

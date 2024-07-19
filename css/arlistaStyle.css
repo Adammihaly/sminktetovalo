@@ -128,13 +128,13 @@ header {
                 }
             }
 
-            & li:nth-child(5) a {
+            & li:nth-child(6) a {
                 color: var(--szin);
                 position: relative;
             }
 
             /* kis kor alatta */
-            & li:nth-child(5) a::before {
+            & li:nth-child(6) a::before {
                 border-radius: 100%;
                 position: absolute;
                 background: var(--szin);
