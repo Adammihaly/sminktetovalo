@@ -22,7 +22,7 @@ export function observe(toObserve, toTransform) {
             }
         });
     }, {
-        threshold: 0.05
+        threshold: 0.1
     });
 
     observer.observe(elToObserve);

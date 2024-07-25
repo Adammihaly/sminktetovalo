@@ -435,11 +435,11 @@ main {
             flex-direction: column;
             text-align: center;
             margin-bottom: 5vh;
-            font-size: 1.25vw;
+            font-size: 1.75vw;
 
             & span {
                 margin-bottom: 0;
-                font-size: 1.25vw;
+                font-size: 1.75vw;
             }
 
             & ul {
@@ -467,6 +467,10 @@ main {
             flex-direction: column;
             gap: 2.5vh;
             width: 40%;
+
+            & i {
+                color: var(--szurke);
+            }
 
             & label {
                 font-size: 1.125vw;

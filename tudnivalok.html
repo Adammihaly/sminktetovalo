@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4210abefe.js" crossorigin="anonymous"></script>
     <script defer src="./script/mobilnavScript.js"></script>
+    <script defer src="./script/galeriaScript.js"></script>
     <title>Tudnivalók</title>
 </head>
 <body>
@@ -95,14 +96,23 @@
         </header>
         </div>
 
+        <div class="expandPicture">
+            <i class="fa-solid fa-x"></i>
+            <img id="expandedPicElement" src="kepek/favicon.png" alt="">
+        </div>
+
         <div class="szoveg">
             <h1>Tájékoztató tetováláshoz:</h1>
+            <p>Kattintson a linkekre, hogy az adott részhez ugorjon!</p>
             <ul>
                 <li><a href="./tudnivalok.html#kizarookok">a kizáró okok</a></li>
                 <li><a href="./tudnivalok.html#megnemvolt">ha nem volt még tetoválásod</a></li>
                 <li><a href="./tudnivalok.html#bejelentkezes">bejelentkezéssel és időpont foglalásával kapcsolatos tudnivalók</a></li>
-                <li><a href="./tudnivalok.html#tetelott">elő és utóápolási tanácsok</a></li>
-                <li>gyógyulási fázisok</li>
+                <li><a href="./tudnivalok.html#tetelott">tetoválás előtt</a></li>
+                <li><a href="./tudnivalok.html#tetnapjan">tetoválás napján</a></li>
+                <li><a href="./tudnivalok.html#mellekhatasok">tetoválás utáni lehetséges mellékhatások</a></li>
+                <li><a href="./tudnivalok.html#tetutan">tetoválás után</a></li>
+                <li><a href="./tudnivalok.html#fazisok">gyógyulási fázisok</a></li>
             </ul>
 
             <h1 id="kizarookok">Kizáró okok:</h1>
@@ -110,6 +120,9 @@
                 <br><br>Sminktetoválás a kezelőorvos alátámasztásával elvégezhető cukorbetegség és hemofília (vérzékenység) esetén
             </p>
             
+            <h1 id="megnemvolt">Ha nem volt még tetoválásod:</h1>
+            <p>Ha nem volt még tetoválásod, és nem zárható ki az allergia, lehetőséged van allergiatesztet csinálni a tetoválás előtt 10 nappal. Ezesetben a tájékoztató elolvasása után válaszd a legördülő menüben az allergiateszt lehetőséget.</p>
+
             <h1 id="bejelentkezes">Bejelentkezés és időpont foglalása:</h1>
             <ul>
                 <li><b>A tetoválás elkészítése 2 alkalom:</b> Az első alkalom (kb. 3 óra), a második a korrekció (kb. 1,5 óra), ahol az esetleges kopásokat korrigáljuk (az első kezelés után 2-3 hónappal) Az időpontnál azt szoktam javasolni, ne essen egybe a menstruációval és az azt megelőző 2 nappal. Vérzékenyebb, érzékenyebb lehetsz, más a pigment beépülése.</li>
@@ -120,9 +133,6 @@
                 <li>A választott technika és a pigment nagyban befolyásolja a végeredményt. Tehát minden tetoválás különböző élettartamú, erről részletes felvilágosítást adok a konzultáción.</li>
                 <li>A tetoválásokat védeni kell a direkt UV-sugárzástól, a megfelelő fényvédelemmel kitolhatjuk sminktetoválásunk élettartamát. A tetoválás kopása minden esetben egyedi. Bőrtípus, pigment, technika és az utóápolás függvényében egyénenként változó! 2-3 éven belül azonban mindenképpen szükség van a szín frissítésére.</li>
             </ul>
-
-            <h1 id="megnemvolt">Ha nem volt még tetoválásod:</h1>
-            <p>Ha nem volt még tetoválásod, és nem zárható ki az allergia, lehetőséged van allergiatesztet csinálni a tetoválás előtt 10 nappal. Ezesetben a tájékoztató elolvasása után válaszd a legördülő menüben az allergiateszt lehetőséget.</p>
              
             <h1 id="tetelott">Sminktetoválás előtt:</h1>
             <ul>
@@ -136,7 +146,7 @@
                 <li>Antibiotikum szedése alatt és azt követő 2 hétben nem tetoválhatunk.</li>
             </ul>
 
-            <h1>Sminktetoválás napján:</h1>
+            <h1 id="tetnapjan">Sminktetoválás napján:</h1>
             <ul>
                 <li>Tilos alkohol, fekete tea, energiaital, kávé fogyasztása</li>
                 <li>Vérthígító hatású gyógyszer, alkohol. drog használatát</li>
@@ -154,7 +164,7 @@
                 <li>nagy mennyiségű érzéstelenítő esetén fejfájás, szédülés</li>
             </ul>
 
-            <h1>Sminktetoválás után:</h1>
+            <h1 id="tetutan">Sminktetoválás után:</h1>
             <ul>
                 <li>3 hétig tilos: uszoda, szauna, szolárium, napozás, fokozott izzadással járó sport</li>
                 <li>ha a kezelt felületen extrém duzzanatot észlelsz, használj steril jeges borogatást</li>
@@ -173,6 +183,9 @@
                 <li><b>Az ár egy alkalom ingyenes korrekciót tartalmaz, mely 4-12 héten belül érvényes.</b> 12 héten túl plusz korrekciónak minősül. További korrekciós alkalmak is igénybe vehetőek amennyiben szükséges, melynek díja 20.000ft.</li>
                 <li><b>Ha a vendég jelen tájékoztatót nem olvasta el körültekintően, nem jelzi a kizáró tényezőt és az a tetoválás napján derül ki, hogy a tetoválást nem tudom elkészíteni, ebben az esetben a konzultációs díj árát ki kell fizetni.</b> (Ez nagyon ritkán fordul elő)</li>
             </ul>
+
+            <h1 id="fazisok">Gyógyulási fázisok</h1>
+            <img src="./kepek/gyogyulasifazisok.jpg" onclick="expand(this)" alt="">
         </div>
 
         <section class="footer">

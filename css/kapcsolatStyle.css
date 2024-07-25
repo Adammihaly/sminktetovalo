@@ -255,6 +255,10 @@ main {
             gap: 2.5vh;
             width: 40%;
 
+            & i {
+                color: var(--szurke);
+            }
+
             & label {
                 font-size: 1.125vw;
                 color: black;
