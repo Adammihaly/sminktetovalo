@@ -267,9 +267,6 @@ main {
             align-items: center;
             gap: 2vw;
             margin-bottom: 5vh;
-
-            transform: translate(-500%);
-            transition: transform 1s ease-in-out;
             
             & img {
                 width: 30%;
@@ -277,6 +274,14 @@ main {
                 object-fit: cover;
                 border-radius: 1rem;
                 cursor: pointer;
+                border: 1px solid var(--szurke);
+            }
+
+            & video {
+                width: 40vw;
+                height: 50vh;
+                border-radius: 1rem;
+                border: 1px solid var(--szurke);
             }
 
             & .img169 {

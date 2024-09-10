@@ -225,7 +225,7 @@ main {
 
         & .balObserve {
             transform: translate(-500%);
-            transition: transform 1s ease-in-out;
+            transition: transform 2s ease-in-out;
         }
 
         & .szoveg {
@@ -234,7 +234,7 @@ main {
             width: 70%;
 
             transform: translate(500%);
-            transition: transform 1s ease-in-out;
+            transition: transform 2s ease-in-out;
 
             & .wrapper {
                 width: 80%;

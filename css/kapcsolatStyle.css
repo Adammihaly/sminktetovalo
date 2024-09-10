@@ -222,30 +222,46 @@ main {
 
             & .balObserve {
                 transform: translate(-500%);
-                transition: transform 1s ease-in-out;
+                transition: transform 2s ease-in-out;
             }
 
             & .jobbObserve {
                 transform: translate(500%);
-                transition: transform 1s ease-in-out;
+                transition: transform 2s ease-in-out;
             }
         }
 
         & .kapSzoveg {
+            width: 100%;
             display: flex;
             flex-direction: column;
             text-align: center;
             margin-bottom: 5vh;
             font-size: 1.75vw;
+            gap: 5vh;
+
+            & .pictogrammok {
+                width: 100%;
+                display: flex;
+                
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.75vh;
+                    width: 33%;
+                    text-wrap: wrap;
+                    font-size: 1.25vw;
+
+                    & i {
+                        font-size: 4.5vw;
+                        color: var(--szurke);
+                    }
+                }
+            }
 
             & span {
                 margin-bottom: 0;
                 font-size: 1.75vw;
-            }
-
-            & ul {
-                color: var(--szurke);
-                list-style: none;
             }
         }
 
@@ -536,7 +552,26 @@ main {
             }
 
             & .kapSzoveg {
-                font-size: 3.5vw;
+                width: 100%;
+                font-size: 4.5vw;
+                gap: 5vh;
+
+                & .pictogrammok {
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    gap: 4vh;
+
+                    & div {
+                        width: 100%;
+                        font-size: 3.5vw;
+
+                        & i {
+                            font-size: 15vw;
+                        }
+                    }
+                }
 
                 & span {
                     font-size: 3.5vw;

@@ -323,6 +323,19 @@ main {
                 }
             }
         }
+
+        & .alsoSzoveg {
+            width: 100%;
+            margin-top: 3vh;
+            
+            & p {
+                color: black;
+                text-align: center;
+                font-size: 1.25vw;
+                font-weight: 500;
+                font-style: italic;
+            }
+        }
     }
     
     .footer {
@@ -582,6 +595,12 @@ main {
                             }
                         }
                     }
+                }
+            }
+
+            & .alsoSzoveg {
+                & p {
+                    font-size: 2.5vw;
                 }
             }
         }
