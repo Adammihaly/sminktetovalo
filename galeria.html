@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/f4210abefe.js" crossorigin="anonymous"></script>
     <script defer src="./script/mobilnavScript.js"></script>
     <script defer src="./script/galeriaScript.js"></script>
+    <script defer src="./script/valasztoScript.js"></script>
     <title>Galéria</title>
 </head>
 <body>
@@ -97,54 +98,60 @@
         </div>
 
         <div class="galeriaWrapper">
-            <h1>Szalon</h1>
-            <div class="galeria elsoGaleria">
-                <img src="kepek/ujkepek/szemjobb.jpg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/szemoldok.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/szemtorles.jpg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/szinsziv.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/tetgepink.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/tetinkcsopp.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/vlmipapir.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/szaj.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujkepek/szinek.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/borszinek.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/ceruzak.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/kartyak.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/kepfeketefeher.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/kepfeketefeher2.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/nyilatkozat.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/studio1.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/studio2.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/studio3.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/studio4.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/unboxing3.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/unboxing2.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/unboxing.jpeg" class="img169" onclick="expand(this)" alt="">
+            <h1>Galéria</h1>
+            <div class="valasztoGombokWrapper">
+                <button id="munkaimGomb" onclick="showMunkaim()">Munkáim</button>
+                <button id="valasszonGomb">Válasszon!</button>
+                <button id="szalonGomb" onclick="showSzalon()">Szalon</button>
             </div>
-            <section class="hajszalCsik masodikObserve"></section>
-            <h1>Munkáim</h1>
-            <div class="galeria masodikGaleria">
-                <img src="kepek/ujabb/ajak.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/ajak2.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/beforeafter3.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/ajak.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/mellbefore.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/mellafter1.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/mellafter2.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/mellafter3.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens1.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens2.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens3.jpeg" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens4.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens5.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/paciens6.png" class="img169" onclick="expand(this)" alt="">
-                <img src="kepek/ujabb/szemoldok2.jpeg" class="img169" onclick="expand(this)" alt="">
-                <video controls>
-                    <source src="kepek/ujabb/tetovalovideo.mp4">
-                    A böngésződ nem támogatja a videókat.
-                </video>
+            <div class="galeria">
+                <div class="galeria" id="szalonGaleria">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szemjobb.jpg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szemoldok.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szemtorles.jpg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szinsziv.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_tetgepink.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_tetinkcsopp.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_vlmipapir.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szaj.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujkepek/jpeg-optimizer_szinek.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_borszinek.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_ceruzak.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_kartyak.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_kepfeketefeher.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_kepfeketefeher2.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_nyilatkozat.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_studio1.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_studio2.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_studio3.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_studio4.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_unboxing3.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_unboxing2.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_unboxing.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                </div>
+                <div class="galeria" id="munkaimGaleria">
+                    <img src="kepek/ujabb/jpeg-optimizer_ajak.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_ajak2.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_beforeafter3.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_ajak.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_mellbefore.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_mellafter1.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_mellafter2.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_mellafter3.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens1.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens2.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens3.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens4.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens5.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_paciens6.png" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <img src="kepek/ujabb/jpeg-optimizer_szemoldok2.jpeg" class="img169" onclick="expand(this)" loading="lazy" alt="">
+                    <video controls>
+                        <source src="kepek/ujabb/tetovalovideo.mp4">
+                        A böngésződ nem támogatja a videókat.
+                    </video>
+                </div>
             </div>
+
         </div>
 
         <section class="footer">

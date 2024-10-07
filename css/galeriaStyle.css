@@ -64,6 +64,11 @@ body {
     margin: 0 auto;
 }
 
+.hoverGomb, .aktivGomb {
+    background-color: white !important;
+    color: var(--szin) !important;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -248,7 +253,7 @@ main {
             font-size: 3vw;
             color: var(--szin);
             font-weight: 600;
-            margin-bottom: 2.5vh;
+            margin-bottom: 1.5vh;
             margin-top: 0;
             text-align: left;
         }
@@ -260,14 +265,59 @@ main {
             display: block;
         }
 
+        & .valasztoGombokWrapper {
+            display: flex;
+            width: 20vw;
+            gap: .1vw;
+            margin-bottom: 5vh;
+
+            & #munkaimGomb, #szalonGomb {
+                border-top: 2px solid var(--szin);
+                border-bottom: 2px solid var(--szin);
+
+                cursor: pointer;
+
+                transition: .15s background-color ease-in-out;
+            }
+
+            & #munkaimGomb {
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+                
+                border-left: 2px solid var(--szin);
+            }
+
+            & #szalonGomb {
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+                border-right: 2px solid var(--szin);
+            }
+
+            & button {
+                width: 33%;
+                height: 7.5vh;
+
+                border: 0;
+                background-color: #A7697E;
+                color: white;
+                font-family: var(--font);
+                font-size: 1vw;
+            }
+        }
+
         & .galeria {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 2vw;
-            margin-bottom: 5vh;
+            min-height: 25vh;
             
+            & #szalonGaleria, #munkaimGaleria {
+                display: none;
+            }
+
             & img {
                 width: 30%;
                 height: 50vh;
@@ -478,6 +528,14 @@ main {
             width: 100%;
             margin-top: 5vh;
 
+            & .valasztoGombokWrapper {
+                width: 75vw;
+
+                & button {
+                    font-size: 3vw;
+                }
+            }
+
             & h1 {
                 font-size: 10vw;
                 text-align: center;
@@ -499,6 +557,10 @@ main {
                 & .img43 {
                     width: 95%;
                     height: 50vh;
+                }
+
+                & video {
+                    width: 95%;
                 }
             }
         }
