@@ -249,11 +249,11 @@ main {
             width: 55%;
 
             #kremkepDiv {
-                background: url(../kepek/ujkepek/opkremek.jpeg) center/cover no-repeat;
+                background: url(../kepek/ujkepek/jpeg-optimizer_opkremek.jpeg) center/cover no-repeat;
             }
 
             & .kep {
-                background: url(../kepek/ujkepek/szemjobb.jpg) center/cover no-repeat;
+                background: url(../kepek/ujkepek/jpeg-optimizer_szemjobb.jpg) center/cover no-repeat;
                 border-radius: 0.5vw;
                 width: 100%;
                 height: 62.5vh;

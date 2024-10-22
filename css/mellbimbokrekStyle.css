@@ -280,93 +280,68 @@ main {
         }
     }
 
-    .kapcsolat {
-        display: flex;
-        flex-direction: column;
+    .expandPicture {
+        display: none;
+        justify-content: center;
         align-items: center;
-        width: 80%;
-        margin: 0 auto;
 
-        & h3 {
-            font-size: 3.5vw;
-            color: var(--szin);
-            font-weight: 600;
-            text-align: center;
-            margin-top: 12.5vh;
-            margin-bottom: 2.5vh;
+        position: fixed;
+
+        width: 100%;
+        height: 100svh;
+        background: rgba(0, 0, 0, 0.5);
+
+        z-index: 99999;
+
+        & i {
+            position: absolute;
+            top: 1vw;
+            left: 1vw;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
         }
 
-        & span {
-            font-size: 1.125vw;
-            color: var(--szurke);
-            margin-bottom: 10vh;
-            text-align: center;
+        & img {
+            max-width: 85%;
+            max-height: 95svh;
+            border-radius: .5rem;
+            border: 2px solid white;
+            object-fit: contain;
+        }
+    }
+
+    .mellrekKepek {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        min-height: 25vh;
+        margin-bottom: 5vh;
+
+        & img {
+            width: 30%;
+            height: 50vh;
+            object-fit: cover;
+            border-radius: 1rem;
+            cursor: pointer;
+            border: 1px solid var(--szurke);
         }
 
-        & .wrapper {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            margin-bottom: 10vh;
+        & video {
+            width: 40vw;
+            height: 50vh;
+            border-radius: 1rem;
+            border: 1px solid var(--szurke);
         }
 
-        & .kapSzoveg {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin-bottom: 5vh;
-            font-size: 1.25vw;
-
-            & span {
-                margin-bottom: 0;
-                font-size: 1.25vw;
-            }
-
-            & ul {
-                color: var(--szurke);
-                list-style: none;
-            }
+        & .img169 {
+            width: 40vw;
         }
 
-        & form {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5vh;
-            width: 40%;
-
-            & label {
-                font-size: 1.125vw;
-                color: black;
-            }
-
-            & div {
-                display: flex;
-                flex-direction: column;
-                gap: .5vh;
-            }
-
-            & input, textarea, select {
-                padding: 1vw 2vw;
-                border-radius: 0.5vw;
-                border: 0;
-                font-size: 1.125vw;
-                font-family: var(--font);
-
-                color: var(--szurke);
-                background-color: rgba(167, 105, 126, 0.15);
-            }
-
-            & button {
-                width: 33%;
-                align-self: center;
-            }
-        }
-
-        & iframe {
-            width: 50%;
-            border: 3px solid var(--szin);
-            border-radius: 0.75vw;
-            box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.25);
+        & .img43 {
+            width: 25vw;
         }
     }
     
@@ -685,6 +660,29 @@ main {
                 height: 20vw;
                 bottom: -10vw;
                 right: -10vw;
+            }
+        }
+
+        .mellrekKepek {
+            flex-direction: column;
+            width: 100%;
+
+            & img {
+                width: 95%;
+            }
+
+            & .img169 {
+                width: 95%;
+                height: 30vh;
+            }
+
+            & .img43 {
+                width: 95%;
+                height: 50vh;
+            }
+
+            & video {
+                width: 95%;
             }
         }
 
